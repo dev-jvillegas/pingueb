@@ -1,0 +1,105 @@
+/* ============================================================
+   PORTAFOLIO — Grid asimétrico con imágenes reales
+   ============================================================ */
+
+#portafolio {
+  background: rgba(250,249,244,0.02);
+  border-top: 1px solid rgba(47,143,139,0.1);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.portfolio-item {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  background: rgba(47,143,139,0.08);
+  border: 1px solid rgba(47,143,139,0.15);
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.portfolio-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+/* Layout asimétrico */
+.portfolio-item:nth-child(1) { grid-column: span 7; }
+.portfolio-item:nth-child(2) { grid-column: span 5; }
+.portfolio-item:nth-child(3) { grid-column: span 5; }
+.portfolio-item:nth-child(4) { grid-column: span 7; }
+
+.portfolio-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s ease;
+  filter: brightness(0.75);
+}
+.portfolio-item:hover .portfolio-img {
+  transform: scale(1.04);
+  filter: brightness(0.6);
+}
+
+.portfolio-info {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(0deg, rgba(15,13,14,0.95) 0%, transparent 100%);
+  width: 100%;
+}
+.portfolio-info h3 {
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.portfolio-info p {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
+.portfolio-tag-list {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+.p-tag {
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(47,143,139,0.4);
+  color: var(--turquesa);
+  padding: 0.15rem 0.5rem;
+  border-radius: 2rem;
+}
+
+.portfolio-cta {
+  margin-top: 2.5rem;
+  text-align: center;
+  color: var(--gris);
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.portfolio-cta a {
+  color: var(--turquesa);
+  text-decoration: none;
+  font-weight: 600;
+}

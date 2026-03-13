@@ -1,0 +1,42 @@
+/* ============================================================
+   FOOTER — Pie de página
+   ============================================================ */
+
+footer {
+  background: rgba(250,249,244,0.02);
+  border-top: 1px solid rgba(47,143,139,0.1);
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.footer-logo img { height: 28px; }
+
+.footer-copy {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  font-size: 0.78rem;
+  color: var(--gris);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-links a {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--gris);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--turquesa); }

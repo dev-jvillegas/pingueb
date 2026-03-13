@@ -1,0 +1,93 @@
+/* ============================================================
+   TESTIMONIOS — Cards con logos de clientes reales
+   ============================================================ */
+
+#testimonios { background: var(--negro); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: rgba(250,249,244,0.03);
+  border: 1px solid rgba(47,143,139,0.12);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.testimonial-card:hover {
+  border-color: rgba(47,143,139,0.3);
+  transform: translateY(-3px);
+}
+
+.stars {
+  color: var(--turquesa);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--crema);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+.testimonial-text::before {
+  content: '"';
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--turquesa);
+  line-height: 0;
+  vertical-align: -0.5rem;
+  margin-right: 0.25rem;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.client-avatar {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--turquesa), var(--turquesa-oscuro));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--crema);
+  flex-shrink: 0;
+}
+/* Avatar con logo real */
+.client-avatar--logo {
+  background: var(--crema);
+  padding: 4px;
+  overflow: hidden;
+}
+.client-avatar--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.client-name {
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--crema);
+}
+.client-biz {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: var(--gris);
+}

@@ -1,0 +1,18 @@
+/* ============================================================
+   PINGÜEB — CSS principal
+   Este archivo solo importa los demás en orden.
+   Para editar estilos, ve al archivo correspondiente.
+   ============================================================ */
+ 
+@import url('base.css');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('stats.css');
+@import url('servicios.css');
+@import url('portafolio.css');
+@import url('testimonios.css');
+@import url('sobre-mi.css');
+@import url('contacto.css');
+@import url('footer.css');
+@import url('utils.css');
+ 
