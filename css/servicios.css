@@ -1,0 +1,183 @@
+/* ============================================================
+   SERVICIOS — Cards de servicios, precios y banner oferta
+   ============================================================ */
+
+#servicios { background: var(--negro); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Header del card destacado: ícono izquierda, badge derecha */
+.service-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.service-card-header .service-icon {
+  margin-bottom: 0;
+}
+
+.service-card {
+  background: rgba(250,249,244,0.03);
+  border: 1px solid rgba(47,143,139,0.15);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--turquesa), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47,143,139,0.4);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.service-card:hover::before { opacity: 1; }
+
+.service-card.featured {
+  border-color: rgba(47,143,139,0.5);
+  background: rgba(47,143,139,0.07);
+}
+
+.service-badge {
+  display: inline-block;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--turquesa);
+  color: var(--crema);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+}
+
+.service-icon {
+  width: 48px; height: 48px;
+  background: rgba(47,143,139,0.15);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.5rem;
+}
+
+.service-name {
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.service-desc {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--gris);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.price-original {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--gris);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.price-current {
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--turquesa);
+}
+.price-label {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--gris);
+  margin-bottom: 0.25rem;
+}
+.price-note {
+  font-family: 'Kreon', serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--turquesa);
+  margin-bottom: 1.5rem;
+}
+
+.service-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.service-includes li {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--gris);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.service-includes li::before {
+  content: '✓';
+  color: var(--turquesa);
+  font-weight: bold;
+}
+
+/* ── BANNER OFERTA ── */
+.offer-banner {
+  background: linear-gradient(135deg, rgba(47,143,139,0.15), rgba(47,143,139,0.05));
+  border: 1px solid rgba(47,143,139,0.3);
+  border-radius: 1rem;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.offer-banner span:first-child { font-size: 1.5rem; }
+.offer-text { flex: 1; }
+.offer-text strong {
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--crema);
+  display: block;
+}
+.offer-text small {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  font-size: 0.78rem;
+  color: var(--gris);
+}
+.offer-deadline {
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--turquesa);
+  letter-spacing: 0.04em;
+}

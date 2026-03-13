@@ -1,0 +1,121 @@
+/* ============================================================
+   SOBRE MÍ — Foto, badge LinkedIn y skills
+   ============================================================ */
+
+#sobre-mi {
+  background: rgba(47,143,139,0.04);
+  border-top: 1px solid rgba(47,143,139,0.1);
+  border-bottom: 1px solid rgba(47,143,139,0.1);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(47,143,139,0.2), rgba(47,143,139,0.05));
+  border: 1px solid rgba(47,143,139,0.2);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Badge / link LinkedIn */
+.about-badge {
+  position: absolute;
+  bottom: -1rem; right: -1rem;
+  background: var(--negro);
+  border: 1px solid rgba(47,143,139,0.3);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+.about-badge-num {
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--turquesa);
+  display: block;
+}
+.about-badge-text {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: var(--gris);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.about-badge--linkedin {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.about-badge--linkedin:hover {
+  border-color: #0A66C2;
+  transform: translateY(-2px);
+}
+.about-badge--linkedin .about-badge-text {
+  color: #0A66C2;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* Contenido textual */
+.about-name {
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+.about-role {
+  font-family: 'Kreon', serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--turquesa);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.about-text {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.about-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+.skill-pill {
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(47,143,139,0.3);
+  color: var(--turquesa);
+  padding: 0.35rem 0.85rem;
+  border-radius: 2rem;
+  transition: background 0.2s, color 0.2s;
+  cursor: default;
+}
+.skill-pill:hover {
+  background: var(--turquesa);
+  color: var(--crema);
+}

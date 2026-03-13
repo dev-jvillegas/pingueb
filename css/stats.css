@@ -1,0 +1,32 @@
+/* ============================================================
+   STATS — Barra de contadores animados
+   ============================================================ */
+
+.stats-bar {
+  background: rgba(47,143,139,0.06);
+  border-top: 1px solid rgba(47,143,139,0.15);
+  border-bottom: 1px solid rgba(47,143,139,0.15);
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--turquesa);
+  display: block;
+}
+.stat-label {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--gris);
+  letter-spacing: 0.06em;
+}
