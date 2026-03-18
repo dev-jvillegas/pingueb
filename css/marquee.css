@@ -1,0 +1,72 @@
+/* ============================================================
+   MARQUEE — Barra de logos de clientes con scroll infinito
+   Para agregar logos: añade <img> tanto en la primera mitad
+   como en la segunda (duplicado) del .marquee-list en el HTML.
+   ============================================================ */
+
+.marquee-bar {
+  background: rgba(47,143,139,0.06);
+  border-top: 1px solid rgba(47,143,139,0.15);
+  border-bottom: 1px solid rgba(47,143,139,0.15);
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+
+.marquee-label {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gris);
+  text-align: center;
+  margin-bottom: 1.25rem;
+  opacity: 0.6;
+}
+
+/* Contenedor con máscara para fade en los bordes */
+.marquee-track {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* La lista que se mueve — contiene los logos duplicados */
+.marquee-list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+/* Pausa al hacer hover */
+.marquee-track:hover .marquee-list {
+  animation-play-state: paused;
+}
+
+.marquee-list img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.25)) brightness(1.15);
+  transition: opacity 0.3s, filter 0.3s, transform 0.3s;
+  flex-shrink: 0;
+}
+
+.marquee-list img:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.25);
+  transform: scale(1.08);
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
