@@ -103,3 +103,23 @@
   text-decoration: none;
   font-weight: 600;
 }
+
+/* Botón Ver sitio dentro de cada card */
+.portfolio-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--crema);
+  text-decoration: none;
+  border: 1px solid rgba(47,143,139,0.4);
+  padding: 0.3rem 0.85rem;
+  border-radius: 2rem;
+  transition: background 0.2s, color 0.2s;
+  background: var(--turquesa);
+}
+.portfolio-btn:hover {
+  background: var(--crema);
+  color: var(--turquesa);
+}
