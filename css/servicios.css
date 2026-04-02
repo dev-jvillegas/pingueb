@@ -147,7 +147,27 @@
   font-weight: bold;
 }
 
-/* ── BANNER OFERTA ── */
+/* ── GARANTÍA ── */
+.guarantee {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  background: rgba(47,143,139,0.06);
+  border: 1px solid rgba(47,143,139,0.2);
+  border-radius: 0.75rem;
+}
+.guarantee p {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+.guarantee p strong,
+.guarantee p::first-letter {
+  color: var(--turquesa);
+}
 .offer-banner {
   background: linear-gradient(135deg, rgba(47,143,139,0.15), rgba(47,143,139,0.05));
   border: 1px solid rgba(47,143,139,0.3);

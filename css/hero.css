@@ -104,6 +104,21 @@
   pointer-events: none;
 }
 
+/* ── BENEFICIOS DEBAJO DEL CTA ── */
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  margin-top: 1.75rem;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+.hero-benefits span {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--gris);
+}
+
 /* ── BOTONES ── */
 .btn-primary {
   display: inline-flex;
