@@ -1,0 +1,346 @@
+/* ============================================================
+   TERMINALES — Subpágina de terminales de cobro
+   ============================================================ */
+
+.terminales-page {
+  background: var(--negro);
+}
+
+.terminal-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 3rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-hero-inner {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-hero .hero-title {
+  font-size: clamp(2.8rem, 6vw, 5.9rem);
+  max-width: 780px;
+}
+
+.terminal-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+}
+
+.terminal-hero-visual::before {
+  content: '';
+  position: absolute;
+  width: min(420px, 80vw);
+  height: min(420px, 80vw);
+  border-radius: 50%;
+  background: rgba(47,143,139,0.16);
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.terminal-hero-visual img {
+  width: min(100%, 520px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 30px 70px rgba(0,0,0,0.45));
+}
+
+.terminal-visual-badge {
+  position: absolute;
+  right: 1rem;
+  bottom: 3.5rem;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--crema);
+  background: rgba(47,143,139,0.92);
+  border: 1px solid rgba(250,249,244,0.25);
+  border-radius: 2rem;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.terminal-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.terminal-copy-block {
+  padding: 2rem;
+  border: 1px solid rgba(47,143,139,0.2);
+  border-radius: 1rem;
+  background: rgba(250,249,244,0.03);
+}
+
+.terminal-copy-block p {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  color: var(--gris);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.terminal-copy-block p + p {
+  margin-top: 1rem;
+}
+
+.terminal-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.terminal-audience,
+.terminal-support,
+.terminal-problem {
+  background: rgba(250,249,244,0.015);
+}
+
+.terminal-pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  max-width: 900px;
+}
+
+.terminal-pill-grid span {
+  font-family: 'Kreon', serif;
+  font-weight: 500;
+  color: var(--crema);
+  background: rgba(47,143,139,0.08);
+  border: 1px solid rgba(47,143,139,0.25);
+  border-radius: 2rem;
+  padding: 0.7rem 1.15rem;
+}
+
+.terminal-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.terminal-step {
+  min-height: 150px;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(47,143,139,0.18);
+  background: rgba(250,249,244,0.03);
+}
+
+.terminal-step strong {
+  display: block;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--turquesa);
+  margin-bottom: 1rem;
+}
+
+.terminal-step span {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--gris);
+  line-height: 1.45;
+}
+
+.terminal-support-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  gap: 4rem;
+  align-items: center;
+}
+
+.terminal-support-image {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(47,143,139,0.16);
+  border-radius: 1.5rem;
+  background:
+    linear-gradient(135deg, rgba(47,143,139,0.10), rgba(250,249,244,0.02)),
+    rgba(250,249,244,0.02);
+  overflow: hidden;
+}
+
+.terminal-support-image img {
+  width: min(82%, 330px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.42));
+}
+
+.terminal-check-list {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+  max-width: 620px;
+}
+
+.terminal-check-list li {
+  font-family: 'Kreon', serif;
+  font-weight: 400;
+  color: var(--gris);
+  line-height: 1.55;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.terminal-check-list li::before {
+  content: '✓';
+  color: var(--turquesa);
+  font-weight: 700;
+}
+
+.terminal-package-btn {
+  margin-top: 1.4rem;
+}
+
+.terminal-faq-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 3rem;
+}
+
+.terminal-faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.terminal-faq-list details {
+  border: 1px solid rgba(47,143,139,0.18);
+  border-radius: 1rem;
+  background: rgba(250,249,244,0.03);
+  padding: 1.1rem 1.25rem;
+}
+
+.terminal-faq-list summary {
+  cursor: pointer;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--crema);
+}
+
+.terminal-faq-list p {
+  font-family: 'Kreon', serif;
+  font-weight: 300;
+  color: var(--gris);
+  line-height: 1.7;
+  margin-top: 0.8rem;
+}
+
+.terminal-final-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 240px);
+  gap: 2rem;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(47,143,139,0.14), rgba(47,143,139,0.04));
+  border: 1px solid rgba(47,143,139,0.28);
+  border-radius: 2rem;
+  padding: 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-final-cta .btn-primary {
+  width: fit-content;
+}
+
+.terminal-final-image {
+  grid-row: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terminal-final-image img {
+  width: min(100%, 240px);
+  height: auto;
+  filter: drop-shadow(0 20px 45px rgba(0,0,0,0.38));
+}
+
+@media (max-width: 980px) {
+  .terminal-hero-inner,
+  .terminal-split,
+  .terminal-support-grid,
+  .terminal-faq-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-hero-visual {
+    min-height: 420px;
+  }
+
+  .terminal-card-grid,
+  .terminal-packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .terminal-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-hero {
+    min-height: auto;
+    padding: 7rem 1.5rem 4rem;
+  }
+
+  .terminal-hero .hero-title {
+    font-size: clamp(2.55rem, 12vw, 4rem);
+  }
+
+  .terminal-hero-visual {
+    min-height: 320px;
+  }
+
+  .terminal-visual-badge {
+    right: 0;
+    bottom: 1rem;
+  }
+
+  .terminal-card-grid,
+  .terminal-packages,
+  .terminal-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-support-image {
+    min-height: 360px;
+  }
+
+  .terminal-final-cta {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  .terminal-final-cta .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .terminal-final-image {
+    grid-row: auto;
+  }
+}

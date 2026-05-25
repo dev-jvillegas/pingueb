@@ -61,6 +61,20 @@ nav.scrolled {
   transform: translateY(-1px);
 }
 
+.nav-links .nav-terminal {
+  background: #ffe000;
+  color: var(--negro);
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.nav-links .nav-terminal:hover {
+  background: #ffea3d;
+  color: var(--negro);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(255,224,0,0.22);
+}
+
 /* ── BOTÓN HAMBURGUESA (oculto en escritorio) ── */
 .nav-hamburger {
   display: none;
